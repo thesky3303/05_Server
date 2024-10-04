@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>JSP2</name>
+	<name>TodoList</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -30,7 +30,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1728001990452</id>
+			<id>1728011581481</id>
 			<name></name>
 			<type>30</type>
 			<matcher>
