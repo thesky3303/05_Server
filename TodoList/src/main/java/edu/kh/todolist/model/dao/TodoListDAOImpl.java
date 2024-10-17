@@ -34,6 +34,7 @@ public class TodoListDAOImpl implements TodoListDAO{
 			todoList.add(new Todo("Servlet 공부", "수업 내용 복습하기~"));
 			todoList.add(new Todo("JSP 공부", "수업 내용 복습하기~222"));
 			todoList.add(new Todo("TodoList만들기", "수업 내용 복습하기~333"));
+			todoList.add(new Todo("ㅎㅇ", "수업 내용 복습하기~4"));
 			
 			
 		} else { // 파일이 이미 존재한다면
@@ -81,6 +82,18 @@ public class TodoListDAOImpl implements TodoListDAO{
 		}
 		
 		return -1;
+	}
+
+	@Override
+	public Todo todoDetailView(int index) {
+		// 전달받은 key(index)와 일치하는 데이터를 todoList 찾아서 리턴
+		// -> 실제로는 전달받은 key(index)와 일치하는 데이터를 DB에서
+		// 	  상세조회해와서 리턴.
+		
+		// TodoList 범위 초과 시 null qksghks
+		if( index < 0 || index >= todoList.size()) return null;
+		
+		return todoList.get(index);
 	}
 
 	

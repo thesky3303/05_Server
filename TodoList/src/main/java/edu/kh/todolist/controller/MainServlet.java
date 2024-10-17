@@ -5,14 +5,15 @@ import java.util.List;
 
 import edu.kh.todolist.model.dto.Todo;
 import edu.kh.todolist.model.service.TodoListService;
-import edu.kh.todolist.model.service.TodoListServiceImlpl;
+import edu.kh.todolist.model.service.TodoListServiceImpl;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-// "/main" 요청을 매핑하여 처리하는 서블릿
+
+// "/main" 요청을 매핑하여 처리하는 서블릿(== Controller)
 @WebServlet("/main")
 public class MainServlet extends HttpServlet{
 
@@ -29,7 +30,7 @@ public class MainServlet extends HttpServlet{
 		// 응답 처리
 		try {
 			// Service 객체 생성
-			TodoListService service = new TodoListServiceImlpl();
+			TodoListService service = new TodoListServiceImpl();
 			
 			// 전체 할 일 목록 Service 호출해서 얻어오기
 			List<Todo> todoList = service.todoListFullView();

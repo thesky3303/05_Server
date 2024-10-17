@@ -20,6 +20,13 @@ public interface TodoListService {
 	 * @return 추가된 index 번호 or -1 반환
 	 */
 	int todoAdd(String title, String detail) throws Exception;
+
+	/** 전달받은 index 번째 todo 반환 서비스(상세조회용)
+	 * @param index
+	 * @return
+	 */
+	Todo todoDetailView(int index);
+	
 	
 	
 	
